@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    html{
+      background-color: rgba(231, 234, 238, 1);
+    }
+    .Card__{
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      max-width: 100%;
+      background-color: white;
+      border-radius: 10px;
+      color: hsl(224, 10%, 45%);
+      padding: 1.3rem;
+      
+    }
+
+    .Card__header{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .Card__img{
+      border-radius: 50%;
+      max-width: 40px;
+      max-height: auto;
+    }
+
+    .Card__info{
+      display: flex;
+      flex-direction: column;
+      line-height: 20%;
+     
+    }
+
+    .Card__name{
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .Card__status{
+      font-size: 0.9rem;
+      margin-top: 0;
+
+    }
+
+
+
+    .Card__content--highlight{
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    .Card__content--bigger--highlight{
+      font-size: 1.6rem;
+    }
+
+    .Card__content--description--bigger{
+      font-size: 1rem;
+    }
+
+    .Card__content--description{
+      font-size: 0.9rem;
+    }
+
+            /* background colors */
+    .Card--purple{
+      background-color: hsl(263, 55%, 52%);
+      color: hsl(0, 0%, 100%);
+    }
+
+    .Card--grey{
+      background-color: hsl(217, 19%, 35%);
+      color: hsl(0, 0%, 100%);
+    }
+
+    .Card--blue{
+      background-color: hsl(219, 29%, 14%);
+      color: hsl(0, 0%, 100%);
+      
+    }
+
+    .Card__content--description--grey{
+      color: hsl(0, 0%, 81%);
+    }
+
+    .Container{
+      display: grid;
+      grid-column: auto 1fr;
+      place-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 1.5rem;
+    }
+
+
+    /* MEDIA QUERIES  */
+
+    @media (min-width: 1920px) and (min-height: 1080px) {
+      .Container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        max-width: 60%;
+        max-height: 50%;
+        align-items: stretch;
+      }
+   
+      .Card__{
+      box-shadow: 20px 20px 80px 20px rgba(0,0,0,0.2);
+      max-height: 100%;
+      max-width: auto;
+      border-radius: 10px;
+      padding: 1.3rem;
+      }
+      
+      .Card__content--description{
+        font-size: 1.2rem;
+        margin: 0;
+      }
+
+      .Card--daniel{
+        grid-column-start: 1;
+        grid-column-end: 3;
+ 
+      }
+      
+      .Card--jonathan{
+        grid-column-start: 3;
+        grid-column-end: 3;
+      }
+
+      .Card--kira{
+        grid-column-start: 4;
+    
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      .Card--patrick{
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+      
+      .Card--jeanette{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+   
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="Container" style="margin-top: 10%; margin-bottom: 5rem;">
+    <div class="Card__  Card--purple Card--daniel">
+      <div class="Card__header">
+        <img src="images/image-daniel.jpg" class="Card__img">
+        <div class="Card__info">
+          <p class="Card__name">Daniel Clifford</p>
+          <p class="Card__status">Verified Graduate</p>
+        </div>
+      </div>
+
+      <div class="Card__content">
+        <p class="Card__content--highlight">I received a job offer mid-course, and the subjects I learned were current, if not more so, 
+        in the company I joined. I honestly feel I got every penny’s worth.</p>
+        <p class="Card__content--description ">“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
+          transition and have heard some people who had an amazing experience here. I signed up 
+          for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
+          The next 12 weeks was the best - and most grueling - time of my life. Since completing 
+          the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”</p>
+        
+      </div>
+    </div>
+
+    <div class="Card__ Card--grey Card--jonathan">
+      <div class="Card__header">
+        <img src="images/image-jonathan.jpg" class="Card_img">
+        <div class="Card__info">
+          <p class="Card__name">Jonathan Walters</p>
+          <p class="Card__status">Verified Graduate</p> 
+        </div>
+      </div>
+
+      <div class="Card__content">
+        <p class="Card__content--highlight">The team was very supportive and kept me motivated</p>
+
+        <p class="Card__content--description Card__content--description--grey">“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
+          for a big company. This was one of the best investments I’ve made in myself. ”</p>
+      </div>
+    </div>
+
+    <div class="Card__ Card--kira">
+      <div class="Card__header">
+        <img src="images/image-kira.jpg" class="Card__img">
+        <div class="Card__info">
+          <p class="Card__name">Kira Whittle</p>
+          <p class="Card__status">Verified Graduate</p>
+        </div>
+      </div>
+
+      <div class="Card__content">
+        <p class="Card__content--highlight Card__content--bigger--highlight">Such a life-changing experience. Highly recommended!</p>
+        <p class="Card__content--description--bigger"> “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
+          professionals who can help me learn programming step by step. I was encouraged to enroll by a former 
+          student of theirs who can only say wonderful things about the program. The entire curriculum and staff 
+          did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team 
+          project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial 
+          could ever have. In fact, I’ve often referred to it during interviews as an example of my developent 
+          experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
+          100% recommend! ”</p>
+        
+      </div>
+    </div>
+
+    <div class="Card__ Card--blue Card--patrick">
+      <div class="Card__header">
+        <img src="images/image-patrick.jpg" class="Card__img">
+        <div class="Card__info">
+          <p class="Card__name">Patrick Abrams</p>
+          <p class="Card__status">Verified Graduate</p>
+        </div>
+      </div>
+
+      <div class="Card__content">
+        <p class="Card__content--highlight"> Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
+          learning from their experiences was easy.</p>
+        <p class="Card__content--description Card__content--description--grey"> “ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
+          gave me the confidence necessary to be able to go out in the world and present myself as a capable 
+          junior developer. The standard is above the rest. You will get the personal attention you need from 
+          an incredible community of smart and amazing people. ”</p>
+        
+      </div>
+    </div>
+
+    <div class="Card__ Card--jeanette">
+      <div class="Card__header">
+        <img src="images/image-jeanette.jpg" class="Card__img">
+        <div class="Card__info">
+          <p class="Card__name">Jeanette Harmon</p>
+          <p class="Card__status">Verified Graduate</p>
+        </div>
+      </div>
+
+      <div class="Card__content">
+        <p class="Card__content--highlight">An overall wonderful and rewarding experience</p>
+        <p class="Card__content--description">“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
+          while doing something I love. ”</p>
+        
+      </div>
+    </div>
+ 
+
+
+
+
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Howslifem8" target="_blank">Leo Ramirez</a>.
+  </div>
+</body>
+</html>
